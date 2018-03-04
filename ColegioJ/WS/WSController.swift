@@ -11,7 +11,7 @@
 import Foundation
 import Reachability
 
-class WSController {
+public class WSController {
     
     var jsonUrl = NSURL()
     
