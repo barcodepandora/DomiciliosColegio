@@ -34,6 +34,45 @@ class ForestViewController: UIViewController, UITableViewDelegate, UITableViewDa
             print("El colegio es " + name)
             cell!.bName.setTitle(name, for: .normal)
             cell!.bName.tag = indexPath.row
+//            cell!.iBus.imageFromUrl(urlString: school["img_url"] as! String)
+
+            
+            //URL containing the image
+            let URL_IMAGE = URL(string: school["img_url"] as! String)
+            
+            
+                let session = URLSession(configuration: .default)
+                
+                //creating a dataTask
+                let getImageFromUrl = session.dataTask(with: URL_IMAGE!) { (data, response, error) in
+                    
+                    //if there is any error
+                    if let e = error {
+                        //displaying the message
+                        print("Error Occurred: \(e)")
+                        
+                    } else {
+                        //in case of now error, checking wheather the response is nil or not
+                        if (response as? HTTPURLResponse) != nil {
+                            
+                            //checking if the response contains an image
+                            if let imageData = data {
+                                
+                                //getting the image
+                                let image = UIImage(data: imageData)
+                                
+                                //displaying the image
+                                cell!.iBus.image = image
+                                
+                            } else {
+                                print("Image file is currupted")
+                            }
+                        } else {
+                            print("No response from server")
+                        }
+                    }
+                }
+            getImageFromUrl.resume()
         }
 
         return cell!
@@ -87,3 +126,18 @@ class ForestViewController: UIViewController, UITableViewDelegate, UITableViewDa
     */
 
 }
+
+//extension UIImageView {
+//    public func imageFromUrl(urlString: String) {
+//        if let url = NSURL(string: urlString) {
+//            let request = NSURLRequest(url: url as URL)
+//            NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.mainQueue) {
+//                (response: URLResponse?, data: NSData?, error: NSError?) -> Void in
+//                if let imageData = data as NSData? {
+//                    self.image = UIImage(data: imageData)
+//                }
+//            }
+//        }
+//    }
+//}
+

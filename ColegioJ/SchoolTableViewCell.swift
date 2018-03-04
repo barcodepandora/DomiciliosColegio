@@ -11,6 +11,7 @@ import UIKit
 class SchoolTableViewCell: UITableViewCell {
 
     @IBOutlet weak var bName: UIButton!
+    @IBOutlet weak var iBus: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

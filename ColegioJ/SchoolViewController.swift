@@ -14,6 +14,14 @@ class SchoolViewController: UIViewController {
     @IBOutlet weak var lName: UILabel!
     @IBOutlet weak var map: MKMapView!
     
+    // MARK: - Back
+    
+    @IBAction func back(_ sender: Any) {
+    
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
     var school: NSDictionary = [:]
     
     override func viewDidLoad() {
