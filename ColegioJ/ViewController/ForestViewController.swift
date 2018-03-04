@@ -2,6 +2,8 @@
 //  ForestViewController.swift
 //  ColegioJ
 //
+//  ViewController vista de menu
+//
 //  Created by Juan Manuel Moreno on 2/3/18.
 //  Copyright © 2018 uzupis. All rights reserved.
 //
@@ -10,10 +12,11 @@ import UIKit
 
 class ForestViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var tForest: UITableView!
+    // MARK; - Character
     
-    var forest: NSMutableDictionary = [:]
-    var schools: NSMutableArray = []
+    @IBOutlet weak var tForest: UITableView! // tabla de colegios
+    var forest: NSMutableDictionary = [:] // resultado de consulta de colegios por ws
+    var schools: NSMutableArray = [] // colegios
     
     // MARK: - Table
     
@@ -34,34 +37,21 @@ class ForestViewController: UIViewController, UITableViewDelegate, UITableViewDa
             print("El colegio es " + name)
             cell!.bName.setTitle(name, for: .normal)
             cell!.bName.tag = indexPath.row
-//            cell!.iBus.imageFromUrl(urlString: school["img_url"] as! String)
-
             
-            //URL containing the image
-            let URL_IMAGE = URL(string: school["img_url"] as! String)
-            
-            
+            // mostramos imagenes de colegios en forma asincrona REF: https://www.simplifiedios.net/get-image-from-url-swift-3-tutorial/
                 let session = URLSession(configuration: .default)
                 
-                //creating a dataTask
                 let getImageFromUrl = session.dataTask(with: URL_IMAGE!) { (data, response, error) in
                     
-                    //if there is any error
                     if let e = error {
-                        //displaying the message
                         print("Error Occurred: \(e)")
                         
                     } else {
-                        //in case of now error, checking wheather the response is nil or not
                         if (response as? HTTPURLResponse) != nil {
                             
-                            //checking if the response contains an image
                             if let imageData = data {
                                 
-                                //getting the image
                                 let image = UIImage(data: imageData)
-                                
-                                //displaying the image
                                 cell!.iBus.image = image
                                 
                             } else {
@@ -104,6 +94,11 @@ class ForestViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Behavoir
+    
+    /*
+     Consulta y muestra un colegio escogido en el menu
+     */
     @IBAction func choose(_ sender: Any) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -126,18 +121,3 @@ class ForestViewController: UIViewController, UITableViewDelegate, UITableViewDa
     */
 
 }
-
-//extension UIImageView {
-//    public func imageFromUrl(urlString: String) {
-//        if let url = NSURL(string: urlString) {
-//            let request = NSURLRequest(url: url as URL)
-//            NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.mainQueue) {
-//                (response: URLResponse?, data: NSData?, error: NSError?) -> Void in
-//                if let imageData = data as NSData? {
-//                    self.image = UIImage(data: imageData)
-//                }
-//            }
-//        }
-//    }
-//}
-
