@@ -40,7 +40,7 @@ class ForestViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             // mostramos imagenes de colegios en forma asincrona REF: https://www.simplifiedios.net/get-image-from-url-swift-3-tutorial/
                 let session = URLSession(configuration: .default)
-                
+                let URL_IMAGE = URL(string: school["img_url"] as! String)
                 let getImageFromUrl = session.dataTask(with: URL_IMAGE!) { (data, response, error) in
                     
                     if let e = error {
@@ -97,7 +97,7 @@ class ForestViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: - Behavoir
     
     /*
-     Consulta y muestra un colegio escogido en el menu
+     Consulta y 
      */
     @IBAction func choose(_ sender: Any) {
         

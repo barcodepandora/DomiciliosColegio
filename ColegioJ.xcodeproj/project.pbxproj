@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		603EB153204C734400D25159 /* Test4WS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EB152204C734400D25159 /* Test4WS.swift */; };
+		603EB15A204C768100D25159 /* SchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EB159204C768000D25159 /* SchoolTableViewCell.swift */; };
 		604C91F22049997C0085471E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604C91F12049997C0085471E /* AppDelegate.swift */; };
 		604C91F42049997C0085471E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604C91F32049997C0085471E /* ViewController.swift */; };
 		604C91F72049997C0085471E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604C91F52049997C0085471E /* Main.storyboard */; };
@@ -14,7 +16,6 @@
 		604C91FC2049997C0085471E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604C91FA2049997C0085471E /* LaunchScreen.storyboard */; };
 		604C92072049997D0085471E /* ColegioJTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604C92062049997D0085471E /* ColegioJTests.swift */; };
 		604C92122049A5210085471E /* ForestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604C92112049A5210085471E /* ForestViewController.swift */; };
-		604C92142049AAE80085471E /* SchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604C92132049AAE80085471E /* SchoolTableViewCell.swift */; };
 		604C92162049B3A40085471E /* SchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604C92152049B3A40085471E /* SchoolViewController.swift */; };
 		60598BFB204B457F0076E77C /* WSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60598BFA204B457F0076E77C /* WSController.swift */; };
 		7D472E3631AC6CCA1147713A /* Pods_ColegioJTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE94143A377B758CFD5FC842 /* Pods_ColegioJTests.framework */; };
@@ -34,6 +35,8 @@
 /* Begin PBXFileReference section */
 		1A1D005348D6BC0CE8263322 /* Pods-ColegioJ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColegioJ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ColegioJ/Pods-ColegioJ.debug.xcconfig"; sourceTree = "<group>"; };
 		2B53F755AFB9907E2FED87C9 /* Pods-ColegioJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColegioJ.release.xcconfig"; path = "Pods/Target Support Files/Pods-ColegioJ/Pods-ColegioJ.release.xcconfig"; sourceTree = "<group>"; };
+		603EB152204C734400D25159 /* Test4WS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test4WS.swift; sourceTree = "<group>"; };
+		603EB159204C768000D25159 /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SchoolTableViewCell.swift; path = ColegioJ/SchoolTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		604C91EE2049997C0085471E /* ColegioJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColegioJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		604C91F12049997C0085471E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		604C91F32049997C0085471E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +48,6 @@
 		604C92062049997D0085471E /* ColegioJTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColegioJTests.swift; sourceTree = "<group>"; };
 		604C92082049997D0085471E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		604C92112049A5210085471E /* ForestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestViewController.swift; sourceTree = "<group>"; };
-		604C92132049AAE80085471E /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolTableViewCell.swift; sourceTree = "<group>"; };
 		604C92152049B3A40085471E /* SchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewController.swift; sourceTree = "<group>"; };
 		60598BFA204B457F0076E77C /* WSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSController.swift; sourceTree = "<group>"; };
 		78CA05F64E05E5D7C1EECE1C /* Pods-ColegioJTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColegioJTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ColegioJTests/Pods-ColegioJTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +85,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		603EB154204C735200D25159 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				604C91F52049997C0085471E /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		603EB155204C736900D25159 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				603EB159204C768000D25159 /* SchoolTableViewCell.swift */,
+				604C92112049A5210085471E /* ForestViewController.swift */,
+				604C92152049B3A40085471E /* SchoolViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		603EB156204C737A00D25159 /* WS */ = {
+			isa = PBXGroup;
+			children = (
+				60598BFA204B457F0076E77C /* WSController.swift */,
+			);
+			path = WS;
+			sourceTree = "<group>";
+		};
+		603EB157204C739B00D25159 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				603EB152204C734400D25159 /* Test4WS.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		604C91E52049997C0085471E = {
 			isa = PBXGroup;
 			children = (
@@ -106,13 +142,12 @@
 		604C91F02049997C0085471E /* ColegioJ */ = {
 			isa = PBXGroup;
 			children = (
-				604C92132049AAE80085471E /* SchoolTableViewCell.swift */,
+				603EB157204C739B00D25159 /* Test */,
+				603EB156204C737A00D25159 /* WS */,
+				603EB155204C736900D25159 /* ViewController */,
+				603EB154204C735200D25159 /* Storyboard */,
 				604C91F12049997C0085471E /* AppDelegate.swift */,
 				604C91F32049997C0085471E /* ViewController.swift */,
-				604C91F52049997C0085471E /* Main.storyboard */,
-				604C92112049A5210085471E /* ForestViewController.swift */,
-				60598BFA204B457F0076E77C /* WSController.swift */,
-				604C92152049B3A40085471E /* SchoolViewController.swift */,
 				604C91F82049997C0085471E /* Assets.xcassets */,
 				604C91FA2049997C0085471E /* LaunchScreen.storyboard */,
 				604C91FD2049997C0085471E /* Info.plist */,
@@ -352,10 +387,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				604C92122049A5210085471E /* ForestViewController.swift in Sources */,
+				603EB15A204C768100D25159 /* SchoolTableViewCell.swift in Sources */,
 				604C91F42049997C0085471E /* ViewController.swift in Sources */,
 				604C92162049B3A40085471E /* SchoolViewController.swift in Sources */,
 				60598BFB204B457F0076E77C /* WSController.swift in Sources */,
-				604C92142049AAE80085471E /* SchoolTableViewCell.swift in Sources */,
 				604C91F22049997C0085471E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				603EB153204C734400D25159 /* Test4WS.swift in Sources */,
 				604C92072049997D0085471E /* ColegioJTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
